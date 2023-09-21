@@ -1,0 +1,4 @@
+练习7.7 为啥默认值是带有°C的字符串
+因为Celsius类型实现了String()方法，
+在flag.CommandLine.Var(&f, name, usage)时，
+会调用f.String()方法，给Flag结构体的DefValue属性就是带有°C这个符号的
